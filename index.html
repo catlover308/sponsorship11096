@@ -49,6 +49,10 @@
             color: #333333;
             text-align: left;
         }
+
+        .description-section {
+            margin-bottom: 2.5rem;
+        }
         
         .email-link {
             color: #0091b3;
@@ -60,6 +64,13 @@
         .email-link:hover {
             text-decoration: underline;
             filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.15));
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
         }
         
         .sponsor-button {
@@ -76,7 +87,6 @@
             cursor: pointer;
             text-align: center;
             filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.1));
-            margin-top: 2rem;
         }
         
         .sponsor-button:hover {
@@ -117,6 +127,14 @@
                 padding: 0.875rem 1.75rem;
                 font-size: 1rem;
             }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .sponsor-button {
+                width: 100%;
+            }
         }
         
         @media (max-width: 480px) {
@@ -135,15 +153,27 @@
     <div class="container">
         <h1>Sponsor Saugus Robotics!</h1>
         
-        <p class="description">
-            We'd love to connect with you! Please take a look at the sponsorship packet below, and contact us at <a href="mailto:hello@frc11096.org" class="email-link">hello@frc11096.org</a> to learn more about our organization, schedule a meeting to discuss sponsorship opportunities, or ask any questions you might have.
-        </p>
-        
-        <p class="footnote">Last Revision 10/22/25 - adjusted sponsor tiers and formatting</p>
-        
-        <a href="https://frc11096.org/sponsor-packet.pdf" class="sponsor-button" target="_blank">
-            View Sponsor Packet
-        </a>
+        <div class="description-section">
+            <p class="description">
+                We'd love to connect with you! Please take a look at the sponsorship packet below, and contact us at <a href="mailto:hello@frc11096.org" class="email-link">hello@frc11096.org</a> to learn more about our organization, schedule a meeting to discuss sponsorship opportunities, or ask any questions you might have.
+            </p>
+            <p class="footnote">Last Revision 10/22/25 - adjusted sponsor tiers and formatting</p>
+        </div>
+
+        <div class="description-section">
+            <p class="description">
+                We're committed to transparent finances. Through our fiscal sponsor <a href="https://hackclub.com/fiscal-sponsorship/" target="_blank" rel="noopener" class="email-link">Hack Club</a>, we get professional financial oversight and 501(c)(3) status for tax-deductible donations. Check out our full transaction history below!
+            </p>
+        </div>
+
+        <div class="button-group">
+            <a href="https://frc11096.org/sponsor-packet.pdf" class="sponsor-button" target="_blank">
+                View Sponsor Packet
+            </a>
+            <a href="https://hcb.hackclub.com/frc-11096" class="sponsor-button" target="_blank" rel="noopener">
+                Transparent Finances
+            </a>
+        </div>
     </div>
 </body>
 </html>
