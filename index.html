@@ -51,7 +51,7 @@
         }
 
         .description-section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem; /* slightly tighter */
         }
         
         .email-link {
@@ -70,7 +70,8 @@
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
-            margin-top: 2rem;
+            margin-top: 1.25rem;   /* reduced top margin */
+            margin-bottom: 1.75rem;/* reduced bottom margin */
         }
         
         .sponsor-button {
@@ -105,7 +106,7 @@
             font-style: italic;
             color: #666666;
             text-align: left;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.25rem;
         }
         
         @media (max-width: 768px) {
@@ -120,19 +121,19 @@
             
             .description {
                 font-size: 1rem;
-                margin-bottom: 2rem;
+                margin-bottom: 1.25rem;
             }
             
+            .button-group {
+                flex-direction: column;
+                gap: 0.75rem;
+                margin-top: 1rem;
+                margin-bottom: 1.25rem;
+            }
+
             .sponsor-button {
                 padding: 0.875rem 1.75rem;
                 font-size: 1rem;
-            }
-
-            .button-group {
-                flex-direction: column;
-            }
-
-            .sponsor-button {
                 width: 100%;
             }
         }
@@ -160,16 +161,19 @@
             <p class="footnote">Last Revision 10/22/25 - adjusted sponsor tiers and formatting</p>
         </div>
 
+        <div class="button-group">
+            <a href="https://frc11096.org/sponsor-packet.pdf" class="sponsor-button" target="_blank" rel="noopener">
+                View Sponsor Packet
+            </a>
+        </div>
+
         <div class="description-section">
             <p class="description">
-                We're committed to transparent finances. Through our fiscal sponsor <a href="https://hackclub.com/fiscal-sponsorship/" target="_blank" rel="noopener" class="email-link">Hack Club</a>, we get professional financial oversight and 501(c)(3) status for tax-deductible donations. Check out our full transaction history below!
+                We're committed to transparent finances. Through our fiscal sponsor <a href="https://hackclub.com/fiscal-sponsorship/" target="_blank" rel="noopener" class="email-link">Hack Club</a>, we get professional financial oversight and 501(c)(3) status for tax-deductible donations, as well as the ability to make our spending publicly viewable.
             </p>
         </div>
 
         <div class="button-group">
-            <a href="https://frc11096.org/sponsor-packet.pdf" class="sponsor-button" target="_blank">
-                View Sponsor Packet
-            </a>
             <a href="https://hcb.hackclub.com/frc-11096" class="sponsor-button" target="_blank" rel="noopener">
                 Transparent Finances
             </a>
