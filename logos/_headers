@@ -1,0 +1,2 @@
+/*
+  Content-Security-Policy: default-src 'self'; img-src 'self' https://sponsor.frc11096.org data: blob:; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self'; frame-ancestors 'self'; base-uri 'self';
