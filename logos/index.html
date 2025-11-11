@@ -96,8 +96,7 @@
     /* Sidebar Styles */
     .sponsor-card {
       margin-bottom: 2rem;
-      /* Prevent container collapse during layout calc */
-      min-height: 140px;
+      min-height: 140px; /* keep layout stable */
     }
 
     .sponsor-tier {
@@ -119,20 +118,18 @@
       font-weight: 600;
     }
 
-    /* Logo styling: explicitly sized and stable */
+    /* Logo styling: consistent, clickable inside anchor */
+    .sponsor-link { text-decoration: none; display: inline-block; }
     .sponsor-logo {
       display: block;
-      height: 100px;   /* explicit height avoids late clamp/flicker */
+      height: 100px;   /* explicit height */
       width: auto;
       max-width: 100%;
       object-fit: contain;
       cursor: pointer;
       transition: opacity 0.3s ease;
-      image-rendering: auto;
     }
-    .sponsor-logo:hover { opacity: 0.8; }
-
-    a.sponsor-link { text-decoration: none; }
+    .sponsor-link:hover .sponsor-logo { opacity: 0.8; }
 
     /* Mobile & tablet: allow scroll */
     @media (max-width: 1024px) {
@@ -195,8 +192,7 @@
     <div class="sidebar">
       <div class="sponsor-card">
         <div class="sponsor-tier">Gold Sponsor</div>
-        <a href="https://www.argosyfdn.org/" class="sponsor-link" target="_blank" rel="noopener">
-          <!-- Same-origin path with PNG fallback; eager to prevent delayed sizing -->
+        <a href="https://www.argosyfdn.org/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Argosy Foundation">
           <img
             src="/logos/argosy-foundation.svg"
             alt="Argosy Foundation"
@@ -209,7 +205,7 @@
 
       <div class="sponsor-card thanks-section">
         <div class="thanks-text">Special Thanks</div>
-        <a href="https://www.sauguscenturions.com/" class="sponsor-link" target="_blank" rel="noopener">
+        <a href="https://www.sauguscenturions.com/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Saugus High School">
           <img
             src="/logos/saugus.png"
             alt="Saugus High School"
@@ -221,7 +217,9 @@
     </div>
   </div>
 
-  <!-- Optional: Cloudflare Insights (blocked by some content blockers). Safe to remove if noisy. -->
+  <!-- No stray images below; logos exist only inside their cards so placement and clickability are correct -->
+
+  <!-- Optional: Remove if content blockers complain; not required for logos -->
   <!--
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" crossorigin="anonymous"></script>
   -->
