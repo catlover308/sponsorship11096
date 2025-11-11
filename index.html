@@ -132,6 +132,15 @@
     }
     .sponsor-link:hover .sponsor-logo { opacity: 0.9; }
 
+    .sponsor-image {
+      display: block;
+      width: 240px;
+      height: 100px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
     /* Mobile & tablet: allow scroll */
     @media (max-width: 1024px) {
       html, body { overflow: auto; }  /* enable scroll on mobile/tablet */
@@ -195,32 +204,14 @@
       <div class="sponsor-card">
         <div class="sponsor-tier">Gold Sponsor</div>
         <a href="https://www.argosyfdn.org/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Argosy Foundation">
-          <img
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 100'%3E%3Crect fill='%23ccc' width='240' height='100'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23666' font-size='14'%3ETest Image%3C/text%3E%3C/svg%3E"
-            alt="Argosy Foundation"
-            class="sponsor-logo"
-            width="240"
-            height="100"
-            loading="lazy"
-            decoding="async"
-            fetchpriority="low"
-          />
+          <div class="sponsor-image" style="background-image: url('/logos/argosy-foundation.svg')"></div>
         </a>
       </div>
 
       <div class="sponsor-card thanks-section">
         <div class="thanks-text">Special Thanks</div>
         <a href="https://www.sauguscenturions.com/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Saugus High School">
-          <img
-            src="/logos/saugus.png"
-            alt="Saugus High School"
-            class="sponsor-logo"
-            width="240"
-            height="100"
-            loading="lazy"
-            decoding="async"
-            fetchpriority="low"
-          />
+          <div class="sponsor-image" style="background-image: url('/logos/saugus.png')"></div>
         </a>
       </div>
     </div>
