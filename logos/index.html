@@ -118,11 +118,11 @@
       font-weight: 600;
     }
 
-    /* Logo styling: consistent, clickable inside anchor */
+    /* Make logos large enough and ensure anchor captures the click */
     .sponsor-link { text-decoration: none; display: inline-block; }
     .sponsor-logo {
       display: block;
-      height: 100px;   /* explicit height */
+      height: 100px;   /* explicit height for consistent sizing */
       width: auto;
       max-width: 100%;
       object-fit: contain;
@@ -211,17 +211,13 @@
             alt="Saugus High School"
             class="sponsor-logo"
             loading="eager"
+            onerror="this.onerror=null; this.src='/logos/saugus.jpg';"
           />
         </a>
       </div>
     </div>
   </div>
 
-  <!-- No stray images below; logos exist only inside their cards so placement and clickability are correct -->
-
-  <!-- Optional: Remove if content blockers complain; not required for logos -->
-  <!--
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" crossorigin="anonymous"></script>
-  -->
+  <!-- Important: no extra <img> elements below; logos appear only inside their anchors -->
 </body>
 </html>
