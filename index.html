@@ -3,183 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f5f3ed" />
   <title>Saugus Robotics - Sponsor Packet</title>
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      color-scheme: light;
+      --paper: #f5f3ed;
+      --ink: #182c38;
+      --muted: #5a6870;
+      --line: #cbd2d1;
+      --blue: #1c5d86;
+      --navy: #163b57;
+    }
 
-    /* Allow content to flow naturally */
-    html, body { height: auto; overflow: auto; }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      background-color: #dcdcdc;
-      color: #333333;
-      min-height: 100vh;
-      padding: 2rem;
+      margin: 0;
+      min-width: 280px;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
     }
-
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
     .page-wrapper {
-      display: flex;
-      gap: 2rem;
-      max-width: 1200px;
+      width: min(100% - 80px, 1180px);
       margin: 0 auto;
-      align-items: center;
-      min-height: 100vh;
+      padding: 56px 0 72px;
+      border-top: 8px solid var(--navy);
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(310px, .85fr);
+      column-gap: clamp(56px, 8vw, 128px);
+      align-items: start;
     }
-
-    .container { flex: 1; min-width: 0; }
-    .sidebar { width: 280px; flex-shrink: 0; }
-
+    .container { min-width: 0; }
     h1 {
-      font-size: 3rem;
+      max-width: 750px;
+      margin: 0 0 30px;
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-size: clamp(3.4rem, 6vw, 6rem);
       font-weight: 700;
-      letter-spacing: -0.05em;
-      margin-bottom: 1.5rem;
-      color: #333333;
-      text-align: left;
+      line-height: .98;
+      letter-spacing: -.07em;
+      text-wrap: balance;
     }
-
-    .description { font-size: 1.125rem; line-height: 1.6; margin-bottom: 0.5rem; color: #333333; text-align: left; }
-    .description-section { margin-bottom: 2rem; }
-    .footnote { font-size: 0.875rem; font-style: italic; color: #666666; text-align: left; margin-bottom: 0.25rem; }
-
+    .description {
+      margin: 0;
+      max-width: 610px;
+      font-size: clamp(1.06rem, 1.25vw, 1.2rem);
+      line-height: 1.7;
+      font-weight: 400;
+    }
     .email-link {
-      color: #0091b3;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.1));
+      color: var(--blue);
+      text-decoration-color: #7aa4bc;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
     }
-    .email-link:hover {
-      text-decoration: underline;
-      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.15));
+    .email-link:hover { text-decoration-color: currentColor; }
+    .footnote {
+      margin: 21px 0 0;
+      color: var(--muted);
+      font-size: .84rem;
+      line-height: 1.5;
     }
-
-    .button-group {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1.25rem;
-      margin-bottom: 1.75rem;
-    }
-
+    .button-group { margin: 0; }
+    .packet-action { margin: 36px 0 55px; }
     .sponsor-button {
-      display: inline-block;
-      background-color: #002e6d;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 38px;
+      min-height: 58px;
+      padding: 15px 21px;
+      background: var(--navy);
       color: white;
-      padding: 1rem 2rem;
       text-decoration: none;
-      border-radius: 8px;
-      font-size: 1.125rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-      text-align: center;
-      filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.1));
-    }
-    .sponsor-button:hover {
-      background-color: #007a96;
-      transform: translateY(-2px);
-      filter: drop-shadow(4px 4px 12px rgba(0,0,0,0.15));
-    }
-    .sponsor-button:active { transform: translateY(0); filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.1)); }
-    .sponsor-button.secondary { background-color: #0091b3; }
-    .sponsor-button.secondary:hover { background-color: #00aacd; }
-    .sponsor-button.donate {
-      background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
-      color: #1a1a1a;
       font-weight: 700;
-      border: 2px solid #b8941f;
+      font-size: 1rem;
+      line-height: 1.3;
+      transition: background-color .18s ease, color .18s ease;
     }
-    .sponsor-button.donate:hover {
-      background: linear-gradient(135deg, #f4d03f 0%, #d4af37 100%);
-      transform: translateY(-3px);
-      filter: drop-shadow(4px 4px 16px rgba(212,175,55,0.4));
+    .sponsor-button::after { content: '↗'; font-size: 1.25em; line-height: 1; font-weight: 400; }
+    .sponsor-button:hover { background: var(--blue); }
+    .details {
+      display: grid;
+      gap: 0;
+      max-width: 610px;
     }
-
-    /* Sidebar Styles */
+    .detail {
+      padding: 25px 0 28px;
+      border-top: 1px solid var(--line);
+    }
+    .detail:last-child { border-bottom: 1px solid var(--line); }
+    .detail .description { font-size: 1rem; line-height: 1.7; }
+    .detail .button-group { margin-top: 18px; }
+    .detail .sponsor-button {
+      min-height: 0;
+      padding: 0;
+      background: transparent;
+      color: var(--blue);
+      font-size: .95rem;
+      text-decoration: underline;
+      text-decoration-color: #7aa4bc;
+      text-underline-offset: 4px;
+      gap: 11px;
+    }
+    .detail .sponsor-button:hover { color: var(--navy); text-decoration-color: currentColor; }
+    .sidebar {
+      padding-top: 6px;
+      border-top: 1px solid var(--ink);
+    }
+    .sponsor-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0;
+    }
     .sponsor-card {
-      margin-bottom: 2rem;
-      min-height: 140px; /* keep layout stable */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      min-height: 145px;
+      padding: 26px 14px;
+      border-bottom: 1px solid var(--line);
     }
-
-    .sponsor-tier {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #666666;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.5rem;
+    .sponsor-card:nth-child(odd) { border-right: 1px solid var(--line); }
+    .sponsor-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 92px;
     }
-
-    .thanks-section { margin-top: 1rem; }
-    .thanks-text {
-      font-size: 0.75rem;
-      color: #666666;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-
-    /* Make logos large enough and ensure anchor captures the click */
-    .sponsor-link { text-decoration: none; display: inline-block; }
     .sponsor-logo {
       display: block;
-      width: 240px;   /* explicit width for consistent sizing */
-      height: 100px;  /* explicit height to reserve space and avoid layout shifts */
+      width: 100%;
+      max-width: 175px;
+      max-height: 94px;
+      height: auto;
       object-fit: contain;
-      cursor: pointer;
-      transition: opacity 0.3s ease;
-      background-color: transparent;
-      will-change: opacity;
+      transition: opacity .18s ease;
     }
-    .sponsor-link:hover .sponsor-logo { opacity: 0.9; }
-
-    .sponsor-image {
-      display: block;
-      width: 240px;
-      height: 100px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
+    .sponsor-link:hover .sponsor-logo { opacity: .7; }
+    .thanks-section { padding-top: 35px; }
+    .thanks-text {
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .11em;
+      text-transform: uppercase;
     }
-
-    /* Mobile & tablet: allow scroll */
-    @media (max-width: 1024px) {
-      html, body { overflow: auto; }  /* enable scroll on mobile/tablet */
-      .page-wrapper { flex-direction: column; gap: 1.5rem; }
-      .sidebar { width: 100%; display: flex; gap: 1.5rem; }
-      .sponsor-card { flex: 1; margin-bottom: 0; }
-      .sponsor-logo { width: 100%; max-width: 240px; height: auto; aspect-ratio: 12 / 5; }
+    .thanks-section .sponsor-link {
+      justify-content: flex-start;
+      width: min(100%, 190px);
+      min-height: 100px;
+      margin-top: 12px;
     }
-
-    @media (max-width: 768px) {
-      body { padding: 1.5rem; }
-      h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-      .description { font-size: 1rem; margin-bottom: 1.25rem; }
-      .button-group { flex-direction: column; gap: 0.75rem; margin-top: 1rem; margin-bottom: 1.25rem; }
-      .sponsor-button { padding: 0.875rem 1.75rem; font-size: 1rem; width: 100%; }
-      .sidebar { flex-direction: column; }
-      .sponsor-card { flex: none; }
+    .thanks-section .sponsor-logo { max-width: 145px; max-height: 100px; }
+    @media (max-width: 900px) {
+      .page-wrapper {
+        width: min(100% - 48px, 680px);
+        padding: 36px 0 54px;
+        display: block;
+      }
+      h1 { max-width: 600px; font-size: clamp(3.2rem, 10vw, 5rem); margin-bottom: 24px; }
+      .packet-action { margin: 31px 0 42px; }
+      .sidebar { margin-top: 58px; }
+      .sponsor-card { min-height: 160px; }
     }
-
-    @media (max-width: 480px) {
-      h1 { font-size: 2rem; }
-      .sponsor-button { padding: 0.75rem 1.5rem; font-size: 0.95rem; }
-      .sidebar { flex-direction: column; }
+    @media (max-width: 520px) {
+      .page-wrapper { width: calc(100% - 36px); padding-top: 29px; border-top-width: 6px; }
+      h1 { font-size: clamp(2.9rem, 11.7vw, 4rem); line-height: 1; }
+      .description { font-size: 1.04rem; line-height: 1.65; }
+      .footnote { margin-top: 17px; }
+      .packet-action .sponsor-button { width: 100%; }
+      .detail { padding: 23px 0 26px; }
+      .sidebar { margin-top: 51px; }
+      .sponsor-card { min-height: 126px; padding: 16px 11px; }
+      .sponsor-logo { max-width: 145px; max-height: 82px; }
+      .thanks-section { padding-top: 30px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
     }
   </style>
 </head>
 <body>
-  <div class="page-wrapper">
+  <main class="page-wrapper">
     <div class="container">
       <h1>Support Saugus Robotics!</h1>
 
@@ -192,77 +209,67 @@
         <p class="footnote">Last Revision 11/9/25 - Robot Cart sponsorship claimed!</p>
       </div>
 
-      <div class="button-group">
+      <div class="button-group packet-action">
         <a href="https://frc11096.org/sponsor-packet.pdf" class="sponsor-button" target="_blank" rel="noopener">
           View Sponsor Packet
         </a>
       </div>
 
-      <div class="description-section">
-        <p class="description">
-          Through our fiscal sponsor <a href="https://hackclub.com/fiscal-sponsorship/" target="_blank" rel="noopener" class="email-link">Hack Club</a>, we get professional financial oversight and 501(c)(3) status for tax-deductible donations, as well as the ability to make our spending publicly viewable.
-        </p>
-      </div>
+      <div class="details">
+        <section class="detail">
+          <p class="description">
+            Through our fiscal sponsor <a href="https://hackclub.com/fiscal-sponsorship/" target="_blank" rel="noopener" class="email-link">Hack Club</a>, we get professional financial oversight and 501(c)(3) status for tax-deductible donations, as well as the ability to make our spending publicly viewable.
+          </p>
+          <div class="button-group">
+            <a href="https://hcb.hackclub.com/frc-11096" class="sponsor-button" target="_blank" rel="noopener">
+              Transparent Finances
+            </a>
+          </div>
+        </section>
 
-      <div class="button-group">
-        <a href="https://hcb.hackclub.com/frc-11096" class="sponsor-button secondary" target="_blank" rel="noopener">
-          Transparent Finances
-        </a>
-      </div>
-
-      <div class="description-section">
-        <p class="description">
-          For individual supporters and non-corporate donors, you can make a potentially tax-deductible donation directly through our fiscal sponsor.
-        </p>
-      </div>
-
-      <div class="button-group">
-        <a href="https://hcb.hackclub.com/donations/start/frc-11096" class="sponsor-button donate" target="_blank" rel="noopener">
-          Make a Donation
-        </a>
+        <section class="detail">
+          <p class="description">
+            For individual supporters and non-corporate donors, you can make a potentially tax-deductible donation directly through our fiscal sponsor.
+          </p>
+          <div class="button-group">
+            <a href="https://hcb.hackclub.com/donations/start/frc-11096" class="sponsor-button" target="_blank" rel="noopener">
+              Make a Donation
+            </a>
+          </div>
+        </section>
       </div>
     </div>
 
-    <div class="sidebar">
-      <div class="sponsor-tier">Gold Sponsors</div>
-      
-      <div class="sponsor-card">
-        <a href="https://adeptfasteners.com/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Adept Fasteners">
-          <div class="sponsor-image" style="background-image: url('https://sponsor.frc11096.org/logos/adept-fasteners.png')"></div>
-        </a>
+    <aside class="sidebar" aria-label="Sponsors">
+      <div class="sponsor-grid">
+        <div class="sponsor-card">
+          <a href="https://adeptfasteners.com/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Adept Fasteners">
+            <img class="sponsor-logo" src="https://sponsor.frc11096.org/logos/adept-fasteners.png" alt="Adept Fasteners" />
+          </a>
+        </div>
+        <div class="sponsor-card">
+          <a href="https://www.argosyfnd.org/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Argosy Foundation">
+            <img class="sponsor-logo" src="https://sponsor.frc11096.org/logos/argosy-foundation.svg" alt="Argosy Foundation" />
+          </a>
+        </div>
+        <div class="sponsor-card">
+          <a href="https://www.ghaasfoundation.org/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Gene Haas Foundation">
+            <img class="sponsor-logo" src="https://sponsor.frc11096.org/logos/ghf.png" alt="Gene Haas Foundation" />
+          </a>
+        </div>
+        <div class="sponsor-card">
+          <a href="https://phmetal.com" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit P&amp;H Metal">
+            <img class="sponsor-logo" src="https://sponsor.frc11096.org/logos/p&amp;h-logo.png" alt="P&amp;H Metal" />
+          </a>
+        </div>
       </div>
-
-      <div class="sponsor-card">
-        <a href="https://www.argosyfnd.org/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Argosy Foundation">
-          <div class="sponsor-image" style="background-image: url('https://sponsor.frc11096.org/logos/argosy-foundation.svg')"></div>
-        </a>
-      </div>
-
-      <!-- Silver Sponsors -->
-      <div class="sponsor-tier">Silver Sponsors</div>
-
-      <div class="sponsor-card">
-        <a href="https://www.ghaasfoundation.org/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Gene Haas Foundation">
-          <div class="sponsor-image" style="background-image: url('https://sponsor.frc11096.org/logos/ghf.png')"></div>
-        </a>
-      </div>
-
-      <!-- Bronze Sponsors -->
-      <div class="sponsor-tier">Bronze Sponsors</div>
-
-      <div class="sponsor-card">
-        <a href="https://phmetal.com" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit P&amp;H Metal">
-          <div class="sponsor-image" style="background-image: url('https://sponsor.frc11096.org/logos/p&h-logo.png')"></div>
-        </a>
-      </div>
-
-      <div class="sponsor-card thanks-section">
+      <div class="thanks-section">
         <div class="thanks-text">Special Thanks</div>
         <a href="https://www.sauguscenturions.com/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Saugus High School">
-          <div class="sponsor-image" style="background-image: url('https://sponsor.frc11096.org/logos/saugus.png')"></div>
+          <img class="sponsor-logo" src="https://sponsor.frc11096.org/logos/saugus.png" alt="Saugus High School" />
         </a>
       </div>
-    </div>
-  </div>
+    </aside>
+  </main>
 </body>
 </html>
