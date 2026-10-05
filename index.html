@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f5f3ed" />
+  <meta name="theme-color" content="#f8f9fa" />
   <title>Saugus Robotics - Sponsor Packet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,700;1,800&display=swap" rel="stylesheet" />
   <style>
     :root {
       color-scheme: light;
-      --paper: #f5f3ed;
-      --ink: #182c38;
-      --muted: #5a6870;
-      --line: #cbd2d1;
-      --blue: #1c5d86;
-      --navy: #163b57;
+      --paper: #f8f9fa;
+      --ink: #333333;
+      --muted: #58636a;
+      --line: #c9d6dc;
+      --blue: #075b8b;
+      --navy: #00376f;
+      --teal: #0091b3;
+      --link: #006f89;
     }
 
     * { box-sizing: border-box; }
@@ -26,7 +28,7 @@
       min-width: 280px;
       background: var(--paper);
       color: var(--ink);
-      font-family: 'DM Sans', Arial, sans-serif;
+      font-family: 'Inter Tight', Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
     }
     a { color: inherit; }
@@ -35,7 +37,8 @@
       width: min(100% - 80px, 1180px);
       margin: 0 auto;
       padding: 56px 0 72px;
-      border-top: 8px solid var(--navy);
+      border-top: 8px solid var(--blue);
+      border-image: linear-gradient(90deg, var(--blue), var(--navy)) 1;
       display: grid;
       grid-template-columns: minmax(0, 1.35fr) minmax(310px, .85fr);
       column-gap: clamp(56px, 8vw, 128px);
@@ -45,12 +48,22 @@
     h1 {
       max-width: 750px;
       margin: 0 0 30px;
-      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-family: 'Inter Tight', Arial, sans-serif;
       font-size: clamp(3.4rem, 6vw, 6rem);
       font-weight: 700;
-      line-height: .98;
-      letter-spacing: -.07em;
+      font-style: italic;
+      line-height: 1;
+      letter-spacing: -.065em;
+      color: var(--navy);
       text-wrap: balance;
+    }
+    h1::after {
+      content: '';
+      display: block;
+      width: 72px;
+      height: 6px;
+      margin-top: 27px;
+      background: var(--teal);
     }
     .description {
       margin: 0;
@@ -60,18 +73,12 @@
       font-weight: 400;
     }
     .email-link {
-      color: var(--blue);
-      text-decoration-color: #7aa4bc;
+      color: var(--link);
+      text-decoration-color: var(--teal);
       text-decoration-thickness: 1px;
       text-underline-offset: 3px;
     }
     .email-link:hover { text-decoration-color: currentColor; }
-    .footnote {
-      margin: 21px 0 0;
-      color: var(--muted);
-      font-size: .84rem;
-      line-height: 1.5;
-    }
     .button-group { margin: 0; }
     .packet-action { margin: 36px 0 55px; }
     .sponsor-button {
@@ -81,7 +88,8 @@
       gap: 38px;
       min-height: 58px;
       padding: 15px 21px;
-      background: var(--navy);
+      background: linear-gradient(110deg, var(--blue), var(--navy));
+      border-left: 5px solid var(--teal);
       color: white;
       text-decoration: none;
       font-weight: 700;
@@ -90,7 +98,7 @@
       transition: background-color .18s ease, color .18s ease;
     }
     .sponsor-button::after { content: '↗'; font-size: 1.25em; line-height: 1; font-weight: 400; }
-    .sponsor-button:hover { background: var(--blue); }
+    .sponsor-button:hover { background: var(--navy); }
     .details {
       display: grid;
       gap: 0;
@@ -106,18 +114,20 @@
     .detail .sponsor-button {
       min-height: 0;
       padding: 0;
+      border-left: 0;
       background: transparent;
-      color: var(--blue);
+      color: var(--link);
       font-size: .95rem;
       text-decoration: underline;
-      text-decoration-color: #7aa4bc;
+      text-decoration-color: var(--teal);
       text-underline-offset: 4px;
       gap: 11px;
     }
     .detail .sponsor-button:hover { color: var(--navy); text-decoration-color: currentColor; }
     .sidebar {
-      padding-top: 6px;
-      border-top: 1px solid var(--ink);
+      padding: 15px 18px 22px;
+      border-top: 6px solid var(--blue);
+      background: #edf4f7;
     }
     .sponsor-grid {
       display: grid;
@@ -134,6 +144,8 @@
       border-bottom: 1px solid var(--line);
     }
     .sponsor-card:nth-child(odd) { border-right: 1px solid var(--line); }
+    .city-card { grid-column: 1 / -1; border-right: 0 !important; }
+    .city-card .sponsor-logo { max-width: 270px; max-height: 78px; }
     .sponsor-link {
       display: flex;
       align-items: center;
@@ -172,21 +184,22 @@
         padding: 36px 0 54px;
         display: block;
       }
-      h1 { max-width: 600px; font-size: clamp(3.2rem, 10vw, 5rem); margin-bottom: 24px; }
+      h1 { max-width: 600px; font-size: clamp(3.3rem, 10vw, 5rem); margin-bottom: 24px; }
       .packet-action { margin: 31px 0 42px; }
       .sidebar { margin-top: 58px; }
       .sponsor-card { min-height: 160px; }
     }
     @media (max-width: 520px) {
       .page-wrapper { width: calc(100% - 36px); padding-top: 29px; border-top-width: 6px; }
-      h1 { font-size: clamp(2.9rem, 11.7vw, 4rem); line-height: 1; }
+      h1 { font-size: clamp(3rem, 11.7vw, 4rem); line-height: 1; }
+      h1::after { margin-top: 22px; }
       .description { font-size: 1.04rem; line-height: 1.65; }
-      .footnote { margin-top: 17px; }
       .packet-action .sponsor-button { width: 100%; }
       .detail { padding: 23px 0 26px; }
-      .sidebar { margin-top: 51px; }
+      .sidebar { margin-top: 51px; padding: 10px 12px 18px; }
       .sponsor-card { min-height: 126px; padding: 16px 11px; }
       .sponsor-logo { max-width: 145px; max-height: 82px; }
+      .city-card .sponsor-logo { max-width: min(100%, 260px); max-height: 72px; }
       .thanks-section { padding-top: 30px; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -206,11 +219,10 @@
           <a href="mailto:hello@frc11096.org" class="email-link">hello@frc11096.org</a>
           to learn more about our organization, schedule a meeting to discuss sponsorship opportunities, or ask any questions you might have.
         </p>
-        <p class="footnote">Last Revision 11/9/25 - Robot Cart sponsorship claimed!</p>
       </div>
 
       <div class="button-group packet-action">
-        <a href="https://frc11096.org/sponsor-packet.pdf" class="sponsor-button" target="_blank" rel="noopener">
+        <a href="/sponsor-packet.pdf" class="sponsor-button" target="_blank" rel="noopener">
           View Sponsor Packet
         </a>
       </div>
@@ -260,6 +272,11 @@
         <div class="sponsor-card">
           <a href="https://phmetal.com" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit P&amp;H Metal">
             <img class="sponsor-logo" src="https://sponsor.frc11096.org/logos/p&amp;h-logo.png" alt="P&amp;H Metal" />
+          </a>
+        </div>
+        <div class="sponsor-card city-card">
+          <a href="https://santaclarita.gov/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit the City of Santa Clarita">
+            <img class="sponsor-logo" src="/logos/city-of-santa-clarita.png" alt="City of Santa Clarita" />
           </a>
         </div>
       </div>
