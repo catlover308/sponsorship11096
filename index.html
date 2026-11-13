@@ -145,7 +145,8 @@
     .sponsor-card:nth-child(odd) { border-right: 1px solid var(--line); }
     .city-card { grid-column: 1 / -1; border-right: 0 !important; }
     .city-card .sponsor-logo { max-width: 270px; max-height: 78px; }
-    .sponsor-link {
+    /* EasyList hides .sponsor-link, including genuine team supporters. */
+    .partner-link {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -161,7 +162,9 @@
       object-fit: contain;
       transition: opacity .18s ease;
     }
-    .sponsor-link:hover .sponsor-logo { opacity: .7; }
+    .relativity-card { grid-column: 1 / -1; border-right: 0 !important; }
+    .relativity-logo { filter: brightness(0); }
+    .partner-link:hover .sponsor-logo { opacity: .7; }
     .thanks-section { padding-top: 35px; }
     .thanks-text {
       color: var(--muted);
@@ -170,7 +173,7 @@
       letter-spacing: .11em;
       text-transform: uppercase;
     }
-    .thanks-section .sponsor-link {
+    .thanks-section .partner-link {
       justify-content: flex-start;
       width: min(100%, 190px);
       min-height: 100px;
@@ -254,35 +257,30 @@
     <aside class="sidebar" aria-label="Sponsors">
       <div class="sponsor-grid">
         <div class="sponsor-card">
-          <a href="https://adeptfasteners.com/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Adept Fasteners">
-            <img class="sponsor-logo" src="https://sponsor.frc11096.org/logos/adept-fasteners.png" alt="Adept Fasteners" />
+          <a href="https://adeptfasteners.com/" class="partner-link" target="_blank" rel="noopener" aria-label="Visit Adept Fasteners">
+            <img class="sponsor-logo" src="/logos/adept-fasteners.png" alt="Adept Fasteners" />
           </a>
         </div>
         <div class="sponsor-card">
-          <a href="https://www.argosyfnd.org/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Argosy Foundation">
-            <img class="sponsor-logo" src="https://sponsor.frc11096.org/logos/argosy-foundation.svg" alt="Argosy Foundation" />
+          <a href="https://www.ghaasfoundation.org/" class="partner-link" target="_blank" rel="noopener" aria-label="Visit Gene Haas Foundation">
+            <img class="sponsor-logo" src="/logos/ghf.png" alt="Gene Haas Foundation" />
           </a>
         </div>
-        <div class="sponsor-card">
-          <a href="https://www.ghaasfoundation.org/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Gene Haas Foundation">
-            <img class="sponsor-logo" src="https://sponsor.frc11096.org/logos/ghf.png" alt="Gene Haas Foundation" />
-          </a>
-        </div>
-        <div class="sponsor-card">
-          <a href="https://phmetal.com" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit P&amp;H Metal">
-            <img class="sponsor-logo" src="https://sponsor.frc11096.org/logos/p&amp;h-logo.png" alt="P&amp;H Metal" />
+        <div class="sponsor-card relativity-card">
+          <a href="https://www.relativityspace.com/" class="partner-link" target="_blank" rel="noopener" aria-label="Visit Relativity Space">
+            <img class="sponsor-logo relativity-logo" src="/logos/relativity-space.svg" alt="Relativity Space" />
           </a>
         </div>
         <div class="sponsor-card city-card">
-          <a href="https://santaclarita.gov/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit the City of Santa Clarita">
+          <a href="https://santaclarita.gov/" class="partner-link" target="_blank" rel="noopener" aria-label="Visit the City of Santa Clarita">
             <img class="sponsor-logo" src="/logos/city-of-santa-clarita.png" alt="City of Santa Clarita" />
           </a>
         </div>
       </div>
       <div class="thanks-section">
         <div class="thanks-text">Special Thanks</div>
-        <a href="https://www.sauguscenturions.com/" class="sponsor-link" target="_blank" rel="noopener" aria-label="Visit Saugus High School">
-          <img class="sponsor-logo" src="https://sponsor.frc11096.org/logos/saugus.png" alt="Saugus High School" />
+        <a href="https://www.sauguscenturions.com/" class="partner-link" target="_blank" rel="noopener" aria-label="Visit Saugus High School">
+          <img class="sponsor-logo" src="/logos/saugus.png" alt="Saugus High School" />
         </a>
       </div>
     </aside>
