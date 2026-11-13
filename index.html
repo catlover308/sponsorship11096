@@ -165,6 +165,20 @@
     .relativity-card { grid-column: 1 / -1; border-right: 0 !important; }
     .relativity-logo { filter: brightness(0); }
     .partner-link:hover .sponsor-logo { opacity: .7; }
+    .previous-section { padding-top: 28px; }
+    .previous-heading {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .previous-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .previous-grid .partner-link { min-height: 72px; }
+    .previous-grid .sponsor-logo { max-width: 135px; max-height: 64px; }
     .thanks-section { padding-top: 35px; }
     .thanks-text {
       color: var(--muted);
@@ -277,6 +291,17 @@
           </a>
         </div>
       </div>
+      <section class="previous-section" aria-labelledby="previous-heading">
+        <h2 id="previous-heading" class="previous-heading">Previous sponsors</h2>
+        <div class="previous-grid">
+          <a href="https://phmetal.com" class="partner-link" target="_blank" rel="noopener" aria-label="Visit P&amp;H Metal, a previous sponsor">
+            <img class="sponsor-logo" src="/logos/p&amp;h-logo.png" alt="P&amp;H Metal" />
+          </a>
+          <a href="https://www.argosyfnd.org/" class="partner-link" target="_blank" rel="noopener" aria-label="Visit Argosy Foundation, a previous sponsor">
+            <img class="sponsor-logo" src="/logos/argosy-foundation.svg" alt="Argosy Foundation" />
+          </a>
+        </div>
+      </section>
       <div class="thanks-section">
         <div class="thanks-text">Special Thanks</div>
         <a href="https://www.sauguscenturions.com/" class="partner-link" target="_blank" rel="noopener" aria-label="Visit Saugus High School">
